@@ -7,10 +7,9 @@ from launch_ros.actions import Node
 def generate_launch_description():
     moveit_config = MoveItConfigsBuilder(
         "name",
-        package_name="my_moveit_config"
+        package_name="my_moveit_config",
     ).to_moveit_configs()
 
-    # RViz Node
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
@@ -24,10 +23,10 @@ def generate_launch_description():
             moveit_config.robot_description,
             moveit_config.robot_description_semantic,
             moveit_config.robot_description_kinematics,
+            moveit_config.planning_pipelines,
+            moveit_config.joint_limits,
             {"use_sim_time": True},
         ],
     )
 
-    return LaunchDescription([
-        rviz_node
-    ])
+    return LaunchDescription([rviz_node])
