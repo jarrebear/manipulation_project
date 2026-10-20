@@ -133,7 +133,7 @@ public:
     execute_trajectory_cartesian();
 
     double gripper_curr = +0.590;
-    double gripper_end = +0.652;
+    double gripper_end = +0.650;
 
     while (gripper_curr < gripper_end) {
       // Closing the gripper
@@ -367,9 +367,7 @@ private:
     // Set the joint target
     move_group_robot_->setJointValueTarget(joint_group_positions_robot_);
   }
-
-  // -3.45 shoulder_pan_joint
-}; // class ApproachRetreatTrajectory
+};
 
 int main(int argc, char **argv) {
 
