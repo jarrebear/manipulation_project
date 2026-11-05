@@ -321,9 +321,9 @@ class ObjectDetection(Node):
             object_msg.position.x = centroid[0]
             object_msg.position.y = centroid[1]
             object_msg.position.z = centroid[2]
-            object_msg.height = dimension[0]
+            object_msg.height = dimension[2]
             object_msg.width = dimension[1]
-            object_msg.thickness = dimension[2]
+            object_msg.thickness = dimension[0]
             self.object_detected_pub.publish(object_msg)
 
 def main(args=None) -> None:

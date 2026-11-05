@@ -14,7 +14,7 @@ class StaticTransformPublisher:
         static_transform_stamped.child_frame_id = 'wrist_rgbd_camera_depth_optical_frame'
         
         static_transform_stamped.transform.translation.x = 0.338  
-        static_transform_stamped.transform.translation.y = 0.150  
+        static_transform_stamped.transform.translation.y = 0.450  
         static_transform_stamped.transform.translation.z = 0.100  
         static_transform_stamped.transform.rotation.x = 0.000
         static_transform_stamped.transform.rotation.y = 0.866

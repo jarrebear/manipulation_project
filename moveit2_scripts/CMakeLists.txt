@@ -16,6 +16,7 @@ find_package(interactive_markers REQUIRED)
 find_package(geometric_shapes REQUIRED)
 find_package(control_msgs REQUIRED)
 find_package(moveit_msgs REQUIRED)
+find_package(custom_msgs REQUIRED)
 
 add_executable(pick_and_place
     src/pick_and_place.cpp)
@@ -56,6 +57,28 @@ ament_target_dependencies(pick_and_place_real
 
 install(TARGETS 
     pick_and_place_real
+    DESTINATION lib/${PROJECT_NAME}
+)
+
+add_executable(pick_and_place_perception
+    src/pick_and_place_perception.cpp)
+
+target_include_directories(pick_and_place_perception
+    PUBLIC include)
+
+ament_target_dependencies(pick_and_place_perception
+    ament_cmake
+    rclcpp
+    rclcpp_action
+    moveit_core
+    moveit_ros_planning_interface
+    interactive_markers
+    moveit_ros_planning
+    control_msgs
+	custom_msgs)
+
+install(TARGETS 
+    pick_and_place_perception
     DESTINATION lib/${PROJECT_NAME}
 )
 
