@@ -18,7 +18,8 @@ class PointCloudInspector(Node):
 
         self.subscription = self.create_subscription(
             PointCloud2,
-            '/wrist_rgbd_depth_sensor/points',
+            '/camera/depth/color/points',
+            # '/wrist_rgbd_depth_sensor/points',
             self.callback,
             10
         )

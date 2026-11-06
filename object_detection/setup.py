@@ -29,6 +29,8 @@ setup(
             'static_transform_publisher = object_detection.static_transform_publisher:main',
             'object_detection = object_detection.object_detection:main',
             'test_pointcloud = object_detection.test_pointcloud:main',
+            'static_transform_publisher_real = object_detection.static_transform_publisher_real:main',
+            'object_detection_real = object_detection.object_detection_real:main',
         ],
     },
 )
