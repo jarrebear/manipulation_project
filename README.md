@@ -1,3 +1,5 @@
+
+
 # Perception-Driven Pick & Place (ROS 2 / MoveIt 2)
 
 A ROS 2 manipulation project in which a robot arm **detects a block with a depth camera and picks it up and places it**, working in both **Gazebo simulation** and on **real hardware**. A Python perception node turns raw point clouds into object poses, and C++ MoveIt 2 nodes use those poses to plan and execute the grasp.
@@ -8,11 +10,11 @@ Built as the manipulation project of the ROS Masterclass by The Construct.
 
 ### Object Detection
 
-(paste object detection, on its own line)
+https://github.com/user-attachments/assets/6a800246-0fd1-48b4-9c27-7647109cbacb
 
 ### Real Robot Pick and Place
 
-(paste real-robot video link here, on its own line)
+https://github.com/user-attachments/assets/3073a931-b63c-4616-9655-1871483f8c74
 
 ## At a Glance
 
